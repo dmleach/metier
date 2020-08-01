@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use PhpImap\Mailbox;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 // Used for route annotations
@@ -26,7 +27,7 @@ class MailController extends AbstractController
     {
         $systemMessage = '';
 
-        $mailbox = new \PhpImap\Mailbox(
+        $mailbox = new Mailbox(
             $this->getParameter('imap.path'),
             $this->getParameter('imap.username'),
             $this->getParameter('imap.password')
