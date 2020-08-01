@@ -23,12 +23,6 @@ class MailController extends AbstractController
     {
         $systemMessage = '';
 
-//        $mailbox = new \PhpImap\Mailbox(
-//            '{imap.mailbox.org:993/imap/ssl}Inbox',
-//            'dave@davedoeswork.com',
-//            '5P9zL1sfdbFe6#d$AOEg2FHNIYEMEQ'
-//        );
-
         $mailbox = new \PhpImap\Mailbox(
             $this->getParameter('imap.path'),
             $this->getParameter('imap.username'),
