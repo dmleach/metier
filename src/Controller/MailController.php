@@ -4,6 +4,9 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
+// Used for route annotations
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+
 class MailController extends AbstractController
 {
     /**
