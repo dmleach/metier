@@ -4,6 +4,10 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
+    # These parameters allow access to the encrypted values stored using Symfony's secrets system
+    imap.path: "%env(IMAP_PATH)%"
+    imap.username: "%env(IMAP_USERNAME)%"
+    imap.password: "%env(IMAP_PASSWORD)%"
 
 services:
     # default configuration for services in *this* file
